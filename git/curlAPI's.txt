@@ -1,0 +1,8 @@
+# Git hub - post a comment in issue or pull request
+
+curl -v -H "Authorization: token accessToken"  -X POST -d '{"body" : "hello test"}'  https://github.com/api/v3/repos/testrepo/testProj/issues/101/comments
+
+
+# Git hub - PR status change
+
+curl -v -H "Authorization: token <accessToken>" -H "Content-Type: application/json" --data "{\"context\":\"<PR-tag>\",\"state\":\"<success/failure/pending>\",\"description\":\"\",\"target_url\":\"<targetURL>\"}" https://github.com/api/v3/repos/testrepo/testProj/statuses/<GITCOMMITHASH> 
